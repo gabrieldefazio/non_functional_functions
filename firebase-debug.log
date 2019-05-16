@@ -1,0 +1,140 @@
+[debug] [2019-05-16T01:47:17.757Z] ----------------------------------------------------------------------
+[debug] [2019-05-16T01:47:17.761Z] Command:       /usr/local/Cellar/node/10.9.0/bin/node /usr/local/bin/firebase deploy --debug
+[debug] [2019-05-16T01:47:17.761Z] CLI Version:   3.18.6
+[debug] [2019-05-16T01:47:17.761Z] Platform:      darwin
+[debug] [2019-05-16T01:47:17.761Z] Node Version:  v8.16.0
+[debug] [2019-05-16T01:47:17.762Z] Time:          Wed May 15 2019 21:47:17 GMT-0400 (EDT)
+[debug] [2019-05-16T01:47:17.762Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-16T01:47:17.775Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-16T01:47:17.775Z] > authorizing via signed-in user
+[debug] [2019-05-16T01:47:17.778Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/functal  
+  
+ Wed May 15 2019 21:47:17 GMT-0400 (EDT)
+[debug] [2019-05-16T01:47:18.162Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-16T01:47:18.165Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/functal/tokens  
+  
+ Wed May 15 2019 21:47:18 GMT-0400 (EDT)
+[debug] [2019-05-16T01:47:18.453Z] <<< HTTP RESPONSE 200
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions.
+ Please upgrade using npm install --save firebase-functions@latest in your functions directory.
+[info] 
+[info] === Deploying to 'functal'...
+[info] 
+[info] i  deploying functions
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] ✔  functions: Finished running predeploy script.
+[debug] [2019-05-16T01:47:22.320Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "firebase-admin": "~5.12.1",
+    "firebase-functions": "^1.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.0",
+    "eslint-plugin-promise": "^3.6.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2019-05-16T01:47:22.322Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/functal?view=CONSUMER_VIEW  
+  
+ Wed May 15 2019 21:47:22 GMT-0400 (EDT)
+[debug] [2019-05-16T01:47:22.323Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/functal?view=CONSUMER_VIEW  
+  
+ Wed May 15 2019 21:47:22 GMT-0400 (EDT)
+[debug] [2019-05-16T01:47:23.246Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-16T01:47:23.517Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2019-05-16T01:47:23.518Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/functal  
+  
+ Wed May 15 2019 21:47:23 GMT-0400 (EDT)
+[debug] [2019-05-16T01:47:23.809Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-16T01:47:23.810Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/296384379157:getServerAppConfig  
+  
+ Wed May 15 2019 21:47:23 GMT-0400 (EDT)
+[debug] [2019-05-16T01:47:24.043Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2019-05-16T01:47:24.044Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/functal/configs  
+  
+ Wed May 15 2019 21:47:24 GMT-0400 (EDT)
+[debug] [2019-05-16T01:47:24.479Z] <<< HTTP RESPONSE 200
+[info] i  functions: packaged functions (135.26 KB) for uploading
+[debug] [2019-05-16T01:47:24.715Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/functal/locations/us-central1/functions:generateUploadUrl  
+  
+ Wed May 15 2019 21:47:24 GMT-0400 (EDT)
+[debug] [2019-05-16T01:47:25.131Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-16T01:47:25.131Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-6290f682-ceef-47b8-a8e0-d63e608321d7/bcb7d1e7-c6a1-4ee1-a4d7-7239bf67c80a.zip?GoogleAccessId=service-296384379157@gcf-admin-robot.iam.gserviceaccount.com&Expires=1557973045&Signature=jM6s6bahep8HHi3fl4p31Fv9mxbnBhYOZoZ0ZjXGufSRuxGA4EOKdqGLV%2BIRskpjLT%2Bl8AEcPObSm2O0y3Pgv5KPs2nif2j67bzqm1J3NJnjAb8P45tJVJKeQmNCrdLxk1FWHDGpoh2lKVbi7dJatb8jElY1jR52xkHHPBrvPMG%2BRrWV6w11vmMt0xltUfyov%2FJ6v8dhyYK62wS4%2FeePTI9LxjZU1ZbxLXjjc0Tifm%2BawPE1rMS5SEkvfLUhMlhQUyetktf%2BatJogbXxsbQ%2Ber2J7j6J1XmgGA244c%2B38OLWNNvc%2BE%2Byuzg1dfNQk9XHlH%2FPrtHa9uqNB1dKQxQKCQ%3D%3D  
+ ReadStream {
+  _readableState: 
+   ReadableState {
+     objectMode: false,
+     highWaterMark: 65536,
+     buffer: BufferList { head: [Object], tail: [Object], length: 1 },
+     length: 65536,
+     pipes: null,
+     pipesCount: 0,
+     flowing: null,
+     ended: false,
+     endEmitted: false,
+     reading: false,
+     sync: false,
+     needReadable: false,
+     emittedReadable: true,
+     readableListening: false,
+     resumeScheduled: false,
+     destroyed: false,
+     defaultEncoding: 'utf8',
+     awaitDrain: 0,
+     readingMore: false,
+     decoder: null,
+     encoding: null },
+  readable: true,
+  domain: null,
+  _events: { end: [Function] },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  path: '/var/folders/ss/zn771clj32z2tkrvdhbclp200000gn/T/firebase-functions-99617WHWfLksDtEib.zip',
+  fd: 20,
+  flags: 'r',
+  mode: 438,
+  start: undefined,
+  end: Infinity,
+  autoClose: true,
+  pos: undefined,
+  bytesRead: 65536 } 
+ Wed May 15 2019 21:47:25 GMT-0400 (EDT)
+[debug] [2019-05-16T01:47:25.611Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: functions folder uploaded successfully
+[debug] [2019-05-16T01:47:25.613Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/functal/locations/us-central1/functions  
+  
+ Wed May 15 2019 21:47:25 GMT-0400 (EDT)
+[debug] [2019-05-16T01:47:26.068Z] <<< HTTP RESPONSE 200
+[info] i  functions: creating function helloWorld...
+[debug] [2019-05-16T01:47:26.071Z] Trigger is:  {"httpsTrigger":{}}
+[debug] [2019-05-16T01:47:26.072Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/functal/locations/us-central1/functions  
+ { sourceUploadUrl: 'https://storage.googleapis.com/gcf-upload-us-central1-6290f682-ceef-47b8-a8e0-d63e608321d7/bcb7d1e7-c6a1-4ee1-a4d7-7239bf67c80a.zip?GoogleAccessId=service-296384379157@gcf-admin-robot.iam.gserviceaccount.com&Expires=1557973045&Signature=jM6s6bahep8HHi3fl4p31Fv9mxbnBhYOZoZ0ZjXGufSRuxGA4EOKdqGLV%2BIRskpjLT%2Bl8AEcPObSm2O0y3Pgv5KPs2nif2j67bzqm1J3NJnjAb8P45tJVJKeQmNCrdLxk1FWHDGpoh2lKVbi7dJatb8jElY1jR52xkHHPBrvPMG%2BRrWV6w11vmMt0xltUfyov%2FJ6v8dhyYK62wS4%2FeePTI9LxjZU1ZbxLXjjc0Tifm%2BawPE1rMS5SEkvfLUhMlhQUyetktf%2BatJogbXxsbQ%2Ber2J7j6J1XmgGA244c%2B38OLWNNvc%2BE%2Byuzg1dfNQk9XHlH%2FPrtHa9uqNB1dKQxQKCQ%3D%3D',
+  name: 'projects/functal/locations/us-central1/functions/helloWorld',
+  entryPoint: 'helloWorld',
+  labels: { 'deployment-tool': 'cli-firebase' },
+  httpsTrigger: {} } 
+ Wed May 15 2019 21:47:26 GMT-0400 (EDT)
+[debug] [2019-05-16T01:47:26.659Z] <<< HTTP RESPONSE 400
+[debug] [2019-05-16T01:47:26.660Z] <<< HTTP RESPONSE BODY
+[warn] ⚠  functions: failed to create function helloWorld
+[info] HTTP Error: 400, The request has errors
+[info] 
+
+Functions deploy had errors. To continue deploying other features (such as database), run:
+[info]     firebase deploy --except functions
+[error] 
+[error] Error: Functions did not deploy properly.
